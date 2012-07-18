@@ -19,7 +19,7 @@ Tests
     </new-page>
     
 * El programador puede organizar las columnas de forma compleja sin mucho trabajo:
-
+````html
     <show-page>
       <field-list: replace>
         <seccion label="Datos personales">
@@ -39,14 +39,14 @@ Tests
 * El programador puede añadir un aside de forma sencilla en un show-page, el diseño fluido sigue funcionando
 
 * El programador puede convertir un show-page en un formulario con autoguardado
-
+````html
     <show-page>
       <field-list: columns="3" fields="a, b, c, d, e" tag="autosave"/>
     </page-page>
     
 
 * El programador puede activar un formulario de nuevo registro dentro de index.dryml de forma super fácil y con el aspecto en una línea (ejemplo bootstrap inline):
-    
+````html
     <index-page>
       <prepend-content:>
         <formulario fields="a, b, c"/>
