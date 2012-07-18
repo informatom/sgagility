@@ -13,7 +13,7 @@ Tests
 * Todos los formularios utilizan la clase form-horizontal y las labels como bootstrap por defecto.
 
 * El programador puede generar formularios de 1, 2 y 3 columnas con facilidad, que además funcionan bien en el móvil.
-
+````html
     <new-page>
       <field-list: columns="2"/>
     </new-page>
