@@ -5,7 +5,6 @@ Example app for Hobo testing purposes
 
 
 
-
 Tests
 -----
 
@@ -46,3 +45,42 @@ Tests
     </page-page>
     
 
+* El programador puede activar un formulario de nuevo registro dentro de index.dryml de forma super fácil y con el aspecto en una línea (ejemplo bootstrap inline):
+    
+    <index-page>
+      <prepend-content:>
+        <formulario fields="a, b, c"/>
+      </prepend-content:>
+    </index-page>
+    
+    Controlador: que sea un cambio muy trivial
+    
+
+* El index por defecto es una tabla en la que puedes hacer clic en toda la línea saliendo la manita. También poder ir directamente a editar y borrar con un icono de lapiz y papelera.
+
+
+* Migas de pan: en el show, en el edit: poder volver al registro o al index fácilmente.
+
+
+* Después de buscar, abres un registro. Tener una forma de "volver a los resultados de la búsqueda".
+
+
+* Búsquedas desplegables con metasearch que funcionen bien.
+
+
+* Las búsquedas globales que se muestren en una caja bonita (no la cosa jquery chunga actual)
+
+
+* Las búsquedas globales agrupadas de forma bonita.
+
+
+* Al eliminar, en vez de la alerta chunga javascript, sacar una alerta con un modal o algo similar.
+
+
+* Los mensajes de validaciones, errores, etc. que utilicen el alert de bootstrap, que es bonito y se puede cerrar.
+
+
+* En el menú superior, enlaces a informes y configuraciones utilizando un menú desplegable basado en bootstrap dropdowns.
+
+
+* Subir ficheros de forma fácil con drag & drop, mezclando las barritas de bootstrap con el plugin de jquery.
