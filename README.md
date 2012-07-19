@@ -12,7 +12,7 @@ Tests
 
 * Todos los formularios utilizan la clase form-horizontal y las labels como bootstrap por defecto.
 
-* El programador puede generar formularios de 1, 2 y 3 columnas con facilidad, que además funcionan bien en el móvil.
+* El programador puede generar formularios o vistas de 1, 2 y 3 columnas con facilidad, que además funcionan bien en el móvil.
 ````html
     <new-page>
       <field-list: columns="2"/>
@@ -34,7 +34,9 @@ Tests
         </seccion>
       </field-list:>
     </show-page>
+    
 
+* El programador puede añadir textareas sin romper la maquetación del formulario
 
 * El programador puede añadir un aside de forma sencilla en un show-page, el diseño fluido sigue funcionando
 
@@ -56,7 +58,10 @@ Tests
     Controlador: que sea un cambio muy trivial
     
 
-* El index por defecto es una tabla en la que puedes hacer clic en toda la línea saliendo la manita. También poder ir directamente a editar y borrar con un icono de lapiz y papelera.
+* El programador puede añadir formularios complejos con dos selects. Por ejemplo, cuando se selecciona una compañía y eso modifica el select de tramitadores.
+
+
+* El index por defecto es una tabla en la que puedes hacer clic en toda la línea saliendo la manita. También poder ir directamente a editar y borrar con un icono de lapiz y papelera. La tabla incluye paginación estilo Bootstrap.
 
 
 * Migas de pan: en el show, en el edit: poder volver al registro o al index fácilmente.
@@ -78,6 +83,9 @@ Tests
 
 
 * Los mensajes de validaciones, errores, etc. que utilicen el alert de bootstrap, que es bonito y se puede cerrar.
+
+
+* Los campos de validaciones muestran los campos afectados en Rojo utilizando las clases de Bootstrap
 
 
 * En el menú superior, enlaces a informes y configuraciones utilizando un menú desplegable basado en bootstrap dropdowns.
