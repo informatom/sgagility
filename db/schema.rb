@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718115429) do
+ActiveRecord::Schema.define(:version => 20120720075308) do
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.date     "start_date"
+    t.string   "author"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stories", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "project_id"
+  end
+
+  add_index "stories", ["project_id"], :name => "index_stories_on_project_id"
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40

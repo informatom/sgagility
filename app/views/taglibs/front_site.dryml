@@ -6,7 +6,7 @@
 
 <include gem='hobo_jquery_ui'/>
 
-<include gem='hobo_clean'/>
+<include gem='hobo_bootstrap'/>
 
 <include src="taglibs/auto/rapid/cards"/>
 <include src="taglibs/auto/rapid/pages"/>

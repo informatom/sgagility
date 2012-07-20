@@ -10,6 +10,10 @@
  *= require hobo_jquery
  *= require hobo_jquery_ui
  *= require jquery-ui/redmond
- *= require hobo_clean
  *= require_tree ./front
+ *= require hobo_bootstrap
+ *= require hobo_bootstrap_docs
 */
+@import "compass_twitter_bootstrap";
+@import "compass_twitter_bootstrap_responsive"
+

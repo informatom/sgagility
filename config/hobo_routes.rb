@@ -5,6 +5,16 @@
 Sgagility::Application.routes.draw do
 
 
+  # Resource routes for controller "projects"
+  get 'projects(.:format)' => 'projects#index', :as => 'projects'
+  get 'projects/new(.:format)' => 'projects#new', :as => 'new_project'
+  get 'projects/:id/edit(.:format)' => 'projects#edit', :as => 'edit_project'
+  get 'projects/:id(.:format)' => 'projects#show', :as => 'project', :constraints => { :id => %r([^/.?]+) }
+  post 'projects(.:format)' => 'projects#create', :as => 'create_project'
+  put 'projects/:id(.:format)' => 'projects#update', :as => 'update_project', :constraints => { :id => %r([^/.?]+) }
+  delete 'projects/:id(.:format)' => 'projects#destroy', :as => 'destroy_project', :constraints => { :id => %r([^/.?]+) }
+
+
   # Lifecycle routes for controller "users"
   post 'users/signup(.:format)' => 'users#do_signup', :as => 'do_user_signup'
   get 'users/signup(.:format)' => 'users#signup', :as => 'user_signup'
@@ -25,5 +35,15 @@ Sgagility::Application.routes.draw do
   match 'login(.:format)' => 'users#login', :as => 'user_login'
   get 'logout(.:format)' => 'users#logout', :as => 'user_logout'
   match 'forgot_password(.:format)' => 'users#forgot_password', :as => 'user_forgot_password'
+
+
+  # Resource routes for controller "stories"
+  get 'stories(.:format)' => 'stories#index', :as => 'stories'
+  get 'stories/new(.:format)' => 'stories#new', :as => 'new_story'
+  get 'stories/:id/edit(.:format)' => 'stories#edit', :as => 'edit_story'
+  get 'stories/:id(.:format)' => 'stories#show', :as => 'story', :constraints => { :id => %r([^/.?]+) }
+  post 'stories(.:format)' => 'stories#create', :as => 'create_story'
+  put 'stories/:id(.:format)' => 'stories#update', :as => 'update_story', :constraints => { :id => %r([^/.?]+) }
+  delete 'stories/:id(.:format)' => 'stories#destroy', :as => 'destroy_story', :constraints => { :id => %r([^/.?]+) }
 
 end

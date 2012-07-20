@@ -21,6 +21,9 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  
+  gem 'compass_twitter_bootstrap', :git => 'git://github.com/wyuenho/compass-twitter-bootstrap'
+  gem 'compass-rails'
 end
 
 gem 'jquery-rails'
@@ -49,6 +52,9 @@ gem "hobo_clean", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
 gem "hobo_clean_admin", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
 gem "hobo_jquery", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
 gem "hobo_jquery_ui", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
+gem "hobo_bootstrap", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo_bootstrap"
+
+gem "will_paginate", :git => "git://github.com/bryanlarsen/will_paginate"
 
 gem "rspec-rails", ">= 2.5.0", :group => [:test, :development]
 gem "jquery-ui-themes", "~> 0.0.4"

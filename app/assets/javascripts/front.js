@@ -13,3 +13,4 @@
 //= require hobo_jquery_ui
 //= require hobo_clean
 //= require_tree ./front
+//= require bootstrap-collapse
