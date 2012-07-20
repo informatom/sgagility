@@ -12,11 +12,22 @@ Tests
 
 * Todos los formularios utilizan la clase form-horizontal y las labels como bootstrap por defecto.
 
-* El programador puede generar formularios o vistas de 1, 2 y 3 columnas con facilidad, que además funcionan bien en el móvil.
+* El programador puede generar formularios o vistas de 1, 2 y 3 columnas con facilidad.
 ````html
     <new-page>
       <field-list: columns="2"/>
     </new-page>
+    
+* Estos formularios funcionan bien a 4 resoluciones diferentes incluyendo aside:
+  * En 980 deberíamos tener: 3 columnas span3 + aside span3
+  * En 1170 deberíamos tener: 3 columnas + aside span3 (todo más amplio)
+  * En menos de 980 deberíamos tener 1 columnas + aside pequeñito
+  * En movil pequeño deberíamos tener 1 columnas y el aside encima del todo
+
+* Estos formularios funcionan bien en 3 navegadores:
+  * Firefox
+  * Chrome
+  * IE7
     
 * El programador puede organizar las columnas de forma compleja sin mucho trabajo:
 ````html
@@ -37,8 +48,6 @@ Tests
     
 
 * El programador puede añadir textareas sin romper la maquetación del formulario
-
-* El programador puede añadir un aside de forma sencilla en un show-page, el diseño fluido sigue funcionando
 
 * El programador puede convertir un show-page en un formulario con autoguardado
 ````html
