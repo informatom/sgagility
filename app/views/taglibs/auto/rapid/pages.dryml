@@ -219,7 +219,7 @@
 
           <section param="content-body">
             <view:description param="description" />
-            <field-list fields="project" param/>
+            <field-list fields="think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, project" param/>
           </section>
     </content:>
 
