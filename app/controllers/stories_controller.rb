@@ -24,4 +24,8 @@ class StoriesController < ApplicationController
     hobo_new { render 'new_3_column_aside' }
   end
   
+  def new_double_size_field
+    hobo_new { render 'new_double_size_field' }
+  end
+  
 end

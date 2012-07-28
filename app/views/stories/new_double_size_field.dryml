@@ -1,0 +1,70 @@
+<new-page content-size="9">
+  
+  <aside:>
+    Hola! Soy el aside :)
+  </aside:>
+  
+  <form:>
+    <field-list: replace>
+      <field-list size="9" columns="3" fields="name, end_date, codigo_postal"/>
+
+      <div class="row columns">
+        <div class="span6">
+          <single-field-list fields="description"/>
+<!--          <bootstrap-field field-name="description"/>-->
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+      
+      <div class="row columns">
+        <div class="span9">
+          <single-field-list fields="description"/>
+        </div>
+      </div>
+      
+      <div class="row columns">
+        <div class="span3">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span6">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+      
+      <div class="row columns">
+        <div class="span3">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+    </field-list:>
+    
+  </form:>
+  
+</new-page>
+
+
+
+
+
+<!--<def tag="bootstrap-field" attrs="field-name">-->
+
+<!--  <div class="control-group">-->
+<!--    -->
+<!--    <label class="control-label">-->
+<!--      <%= field_name %>-->
+<!--    </label>-->
+<!--    -->
+<!--    <div class="controls">-->
+<!--      <input type="text" name="test"/>-->
+<!--    </div>-->
+<!--    -->
+<!--  </div>-->
+<!--</def>-->

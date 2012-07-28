@@ -10,6 +10,7 @@ Sgagility::Application.routes.draw do
   match 'stories/new_aside' => 'stories#new_aside'
   match 'stories/new_2_column_aside' => 'stories#new_2_column_aside'
   match 'stories/new_3_column_aside' => 'stories#new_3_column_aside'
+  match 'stories/new_double_size_field' => 'stories#new_double_size_field'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

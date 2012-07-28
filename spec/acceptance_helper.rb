@@ -9,7 +9,9 @@ def resize(size)
   if size == :mobile
     Capybara.current_session.driver.browser.manage.window.resize_to(320,600)
   elsif size == :bigmobile
-    Capybara.current_session.driver.browser.manage.window.resize_to(700,600)
+    Capybara.current_session.driver.browser.manage.window.resize_to(650,600)
+  elsif size == :smalltablet
+    Capybara.current_session.driver.browser.manage.window.resize_to(790,600)
   elsif size == :netbook
     Capybara.current_session.driver.browser.manage.window.resize_to(1024,700)
   elsif size == :desktop
@@ -21,6 +23,8 @@ def human_check_sizes(mensaje)
   resize :desktop
   human_check mensaje
   resize :netbook
+  human_check mensaje
+  resize :smalltablet
   human_check mensaje
   resize :bigmobile
   human_check mensaje
