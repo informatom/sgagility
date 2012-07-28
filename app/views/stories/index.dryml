@@ -1,0 +1,3 @@
+<index-page>
+  <collection: fields="this, description, think_date, start_date, actions"/>
+</index-page>
