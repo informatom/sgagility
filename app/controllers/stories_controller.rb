@@ -28,4 +28,9 @@ class StoriesController < ApplicationController
     hobo_new { render 'new_double_size_field' }
   end
   
+  def index
+    hobo_index do
+      @story = Story.new
+    end
+  end
 end
