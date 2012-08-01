@@ -1,0 +1,30 @@
+<show-page>
+  <collection-section: replace>
+    <file-attachments/>
+  </collection-section:>
+</show-page>
+
+<def tag="file-attachments">
+  <fieldset>
+    <legend>
+      <span class="pull-left">Report files</span>
+      <form action="" class="pull-left" id="fileupload">
+        <span class="btn btn-success fileinput-button" style="margin-left:8px;">
+          <i class="icon-plus icon-white"></i>
+          <span>Add or Drag files</span>
+          <input type="file" id="fileupload-input" 
+            name="attachment[document]" multiple="true"
+            data-url="&project_attachments_path(@project)"/>
+        </span>
+      </form>
+    </legend>
+    <div class="progress progress-striped active hide" id="upload-progress">
+      <div class="bar" style="width:0%"></div>
+    </div>
+    <ul class="thumbnails" id="attachments" part="attachments">
+      <repeat with="&@project.attachments">
+        <card/>
+      </repeat>
+    </ul>
+  </fieldset>
+</def>

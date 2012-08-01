@@ -11,6 +11,9 @@ class Project < ActiveRecord::Base
   end
   
   has_many :stories
+  has_many :attachments
+  
+  children :attachments
 
   # --- Permissions --- #
 

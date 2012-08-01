@@ -47,5 +47,5 @@ Sgagility::Application.configure do
 
   config.watchable_dirs[File.join(config.root, 'app/views')] = ['dryml']
   
-  config.reload_classes_only_on_change = false
+  config.reload_classes_only_on_change = true
 end

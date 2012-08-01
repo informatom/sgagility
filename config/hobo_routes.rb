@@ -15,6 +15,16 @@ Sgagility::Application.routes.draw do
   delete 'projects/:id(.:format)' => 'projects#destroy', :as => 'destroy_project', :constraints => { :id => %r([^/.?]+) }
 
 
+  # Resource routes for controller "attachments"
+  get 'attachments(.:format)' => 'attachments#index', :as => 'attachments'
+  get 'attachments/new(.:format)' => 'attachments#new', :as => 'new_attachment'
+  get 'attachments/:id/edit(.:format)' => 'attachments#edit', :as => 'edit_attachment'
+  get 'attachments/:id(.:format)' => 'attachments#show', :as => 'attachment', :constraints => { :id => %r([^/.?]+) }
+  post 'attachments(.:format)' => 'attachments#create', :as => 'create_attachment'
+  put 'attachments/:id(.:format)' => 'attachments#update', :as => 'update_attachment', :constraints => { :id => %r([^/.?]+) }
+  delete 'attachments/:id(.:format)' => 'attachments#destroy', :as => 'destroy_attachment', :constraints => { :id => %r([^/.?]+) }
+
+
   # Lifecycle routes for controller "users"
   post 'users/signup(.:format)' => 'users#do_signup', :as => 'do_user_signup'
   get 'users/signup(.:format)' => 'users#signup', :as => 'user_signup'
