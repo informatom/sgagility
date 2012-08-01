@@ -15,6 +15,8 @@ class Attachment < ActiveRecord::Base
     :whiny => false,
     :path => 'lib/attachments/:style/:filename',
     :url => '/attachments/:id?style=:style'
+  
+  validates_attachment_size :document, { :in => 0..1500.kilobytes }
     
     
   def thumbnail_url(style = :original)

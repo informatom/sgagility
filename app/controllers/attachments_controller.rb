@@ -15,6 +15,8 @@ class AttachmentsController < ApplicationController
     if @attachment.save
       @this = @project
       hobo_ajax_response
+    else
+      render :js => "alert('Error while saving record: #{@attachment.errors.full_messages.to_sentence}');"
     end
   end
   
