@@ -2,7 +2,8 @@ $ ->
   # Start of file upload
   $('#fileupload').fileupload({
     dataType: 'script',
-    url: $('#fileupload-input').data('url')
+    url: $('#fileupload-input').data('url') + '&render[0][id]=attachments&render[0][part_context]=' + $("[data-rapid-page-data]").data('rapid-page-data').hobo_parts['attachments']
+    
   });
   
   $('#fileupload').bind('fileuploadstart', (e) ->

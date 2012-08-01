@@ -13,7 +13,8 @@ class AttachmentsController < ApplicationController
     @project = Project.find(params[:project_id])
     @attachment = @project.attachments.new(params[:attachment])
     if @attachment.save
-      render
+      @this = @project
+      hobo_ajax_response
     end
   end
   

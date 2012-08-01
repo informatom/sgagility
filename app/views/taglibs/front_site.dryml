@@ -14,9 +14,6 @@
 
 <include src="application"/>
 
-<!--Include the card for the attachments-->
-<include src="attachments/card"/>
-
 <extend tag="page">
   <old-page merge>
     <append-app-name:>

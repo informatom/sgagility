@@ -83,6 +83,7 @@
 
     <content: param>
           <header param="content-header">
+            <a:project param="parent-link">&laquo; <ht key="attachment.actions.back_to_parent" parent="Project" name="&this">Back to <name/></ht></a:project>
             <h2 param="heading">
               <ht key="attachment.show.heading" name="#{name(:no_wrapper => true)}">
                 Attachment <name/>
@@ -99,7 +100,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="document_file_name, document_content_type, document_file_size, document_updated_at, project" param/>
+            <field-list fields="document_file_name, document_content_type, document_file_size, document_updated_at" param/>
           </section>
     </content:>
 
