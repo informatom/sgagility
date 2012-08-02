@@ -4,6 +4,13 @@ Sgagility::Application.routes.draw do
   root :to => 'front#index'
 
   match 'search' => 'front#search', :as => 'site_search'
+  
+  match 'stories/new_2_column' => 'stories#new_2_column'
+  match 'stories/new_3_column' => 'stories#new_3_column'
+  match 'stories/new_aside' => 'stories#new_aside'
+  match 'stories/new_2_column_aside' => 'stories#new_2_column_aside'
+  match 'stories/new_3_column_aside' => 'stories#new_3_column_aside'
+  match 'stories/new_double_size_field' => 'stories#new_double_size_field'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

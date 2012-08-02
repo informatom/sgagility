@@ -1,0 +1,11 @@
+<index-page>
+  
+  <prepend-content-body:>
+    <one-line-form with="&@story" fields="description, think_date, start_date"/>
+  </prepend-content-body:>
+  
+  <new-link: replace/>
+
+  <collection: fields="this, description, think_date, start_date, actions"/>
+
+</index-page>
