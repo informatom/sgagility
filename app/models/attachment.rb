@@ -52,5 +52,4 @@ class Attachment < ActiveRecord::Base
     true
   end
 
-  # attr_accessible :title, :body
 end

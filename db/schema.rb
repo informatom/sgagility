@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801053047) do
+ActiveRecord::Schema.define(:version => 20120802051955) do
 
   create_table "attachments", :force => true do |t|
     t.datetime "created_at"
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(:version => 20120801053047) do
     t.string   "localidad"
     t.string   "codigo_postal"
     t.string   "email"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "stories", ["project_id"], :name => "index_stories_on_project_id"
