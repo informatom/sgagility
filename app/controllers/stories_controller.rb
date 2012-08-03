@@ -33,4 +33,31 @@ class StoriesController < ApplicationController
       @story = Story.new
     end
   end
+  
+  
+  def show
+    #@story = Story.find(params[:id])
+    hobo_show do
+      if params[:style]
+        send_file @story.photo.path(params[:style])
+      else
+        render
+      end
+    end
+  end
+  
+  def update
+    hobo_update do
+      respond_to do |format| 
+        format.js   { 
+          @this = @project
+          hobo_ajax_response }
+        format.html { redirect_to @story }
+      end
+    end
+  end
+  
+  
+  
+  
 end

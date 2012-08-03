@@ -17,6 +17,14 @@ class Story < ActiveRecord::Base
   end
   
   belongs_to :project
+  
+  has_attached_file :photo, 
+    :styles => { 
+      :medium => ["200x138#", :png], 
+      :thumb => ["100x100>", :png] },
+    :whiny => false,
+    :path => 'lib/photos/:style/:filename',
+    :url => '/stories/:id?style=:style'
 
   # --- Permissions --- #
 
