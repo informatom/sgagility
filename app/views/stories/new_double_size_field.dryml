@@ -23,7 +23,7 @@
           <single-field-list fields="description"/>
         </div>
         <div class="span3">
-          Foto
+          <single-field-list fields="responsable"/>
         </div>
       </div>
       
