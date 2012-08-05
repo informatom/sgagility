@@ -84,10 +84,10 @@
 
     <a href="&this.photo.url(:original)" class="thumbnail">
       <img src="&this.photo.url(:medium)"/>
-          <a class="btn btn-success" href="#" 
+    </a>
+    <a class="btn btn-success" style="margin:5px" href="#" 
       onclick="$('input[type=file]').trigger('click');">
       <i class="icon-plus icon-white"></i>
-    </a>
     </a>
 
 
