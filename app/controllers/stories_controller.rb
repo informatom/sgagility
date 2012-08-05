@@ -36,7 +36,6 @@ class StoriesController < ApplicationController
   
   
   def show
-    #@story = Story.find(params[:id])
     hobo_show do
       if params[:style]
         send_file @story.photo.path(params[:style])
