@@ -14,3 +14,4 @@
 //= require hobo_clean
 //= require_tree ./front
 //= require bootstrap-collapse
+//= require bootstrap-tab

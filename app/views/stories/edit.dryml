@@ -1,4 +1,4 @@
-<edit-page content-size="9">
+<edit-page content-size="9" nav-location="top">
   
   <aside:>
     Hola! Soy el aside :)
@@ -7,11 +7,29 @@
   </aside:>
   
   
+  <prepend-content-body:>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#patata" data-toggle="tab">Patata</a></li>
+      <li><a href="#ficha" data-toggle="tab">Ficha</a></li>
+      <li><a href="#resumen" data-toggle="tab">Resumen</a></li>
+      <li><a href="#facturas" data-toggle="tab">Facturas</a></li>
+      <li><a href="#extra" data-toggle="tab">Extra</a></li>
+      <li><a href="#documentacion" data-toggle="tab">Documentación</a></li>
+    </ul>
+  </prepend-content-body:>
+  
+  
   <form:>
     <field-list: replace>
-      <field-list size="9" columns="3" fields="name, end_date, codigo_postal"/>
-
-      <div class="row columns">
+      
+      <div class="tab-content">
+      
+      <div id="patata" class="tab-pane active">
+        <field-list size="9" columns="3" 
+          fields="name, end_date, codigo_postal"/>
+      </div>
+      
+      <div class="row columns tab-pane" id="ficha">
         <div class="span6">
           <single-field-list fields="description"/>
         </div>
@@ -20,7 +38,7 @@
         </div>
       </div>
       
-      <div class="row columns">
+      <div class="row columns tab-pane" id="resumen">
         <div class="span6">
           <single-field-list fields="description"/>
         </div>
@@ -29,13 +47,13 @@
         </div>
       </div>
       
-      <div class="row columns">
+      <div class="row columns tab-pane" id="facturas">
         <div class="span9">
           <single-field-list fields="description"/>
         </div>
       </div>
       
-      <div class="row columns">
+      <div class="row columns tab-pane" id="extra">
         <div class="span3">
           <single-field-list fields="description"/>
         </div>
@@ -44,7 +62,7 @@
         </div>
       </div>
       
-      <div class="row columns">
+      <div class="row columns tab-pane" id="documentacion">
         <div class="span3">
           <single-field-list fields="description"/>
         </div>
@@ -54,6 +72,8 @@
         <div class="span3">
           <single-field-list fields="responsable"/>
         </div>
+      </div>
+      
       </div>
     </field-list:>
     
