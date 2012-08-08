@@ -48,9 +48,7 @@ class StoriesController < ApplicationController
   def update
     hobo_update do
       respond_to do |format| 
-        format.js   { 
-          @this = @project
-          hobo_ajax_response }
+        format.js   { hobo_ajax_response }
         format.html { redirect_to @story }
       end
     end
