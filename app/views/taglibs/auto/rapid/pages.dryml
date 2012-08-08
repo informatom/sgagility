@@ -220,7 +220,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="start_date, author, end_date" param/>
+            <field-list fields="start_date, author, end_date, user" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="attachment.collection.heading" count="&this.attachments.count" >

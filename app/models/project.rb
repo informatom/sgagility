@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
   
   has_many :stories
   has_many :attachments
+  belongs_to :user
   
   children :attachments
 

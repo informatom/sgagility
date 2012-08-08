@@ -1,0 +1,19 @@
+<edit-page>
+
+  <prepend-content-header:>
+    <div part="status-box" id="status-box">
+      <span id="edit-status" class="alert alert-success pull-right">
+        All changes have been saved
+      </span>
+    </div>
+  </prepend-content-header:>
+  
+  <form: update="status-box" no-spinner="true" without-actions/>
+
+</edit-page>
+
+
+<!-- Make sure the datepicker changes are saved -->
+<def tag="input" for="Date">
+  <datepicker onSelect="form_change();" merge/>
+</def>

@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
       user.state = "active"
     end
   end
+  
+  has_many :projects
 
 
   # --- Signup lifecycle --- #
