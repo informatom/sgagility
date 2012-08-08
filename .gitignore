@@ -16,3 +16,6 @@
 
 Gemfile
 Gemfile.lock
+
+lib/attachments
+lib/photos

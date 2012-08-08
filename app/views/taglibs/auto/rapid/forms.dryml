@@ -1,5 +1,17 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
+<def tag="form" for="Attachment">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="document_file_name, document_content_type, document_file_size, document_updated_at, project" param/>
+    <div param="actions">
+      <submit label="#{ht 'attachment.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="Project">
   <form merge param="default">
     <error-messages param/>
@@ -15,7 +27,7 @@
 <def tag="form" for="Story">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="name, description, think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, project" param/>
+    <field-list fields="name, description, think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, project" param/>
     <div param="actions">
       <submit label="#{ht 'story.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

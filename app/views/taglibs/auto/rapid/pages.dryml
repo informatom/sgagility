@@ -5,10 +5,132 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Attachment"><ht key="attachment.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Project"><ht key="project.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Story"><ht key="story.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
   </navigation>
 </def>
+
+
+
+
+<!-- ====== Attachment Pages ====== -->
+
+<def tag="index-page" for="Attachment">
+  <page merge title="#{ht 'attachment.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page attachment" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="attachment.index.heading">
+            <model-name-human model="&model"/>
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="attachment.collection.count" count="&collection_count">
+            <count summary/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="attachment.actions.new">New Attachment</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Attachment">
+  <page merge title="#{ht 'attachment.new.title', :default=>[' New Attachment'] }">
+    <body: class="new-page attachment" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="attachment.new.heading">
+            New Attachment
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'attachment.actions.create', :default=>['Create Attachment']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Attachment">
+  <page merge title="#{ht 'attachment.show.title', :default=>['Attachment'], :name => name(:no_wrapper => true) }">
+
+    <body: class="show-page attachment" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:project param="parent-link">&laquo; <ht key="attachment.actions.back_to_parent" parent="Project" name="&this">Back to <name/></ht></a:project>
+            <h2 param="heading">
+              <ht key="attachment.show.heading" name="#{name(:no_wrapper => true)}">
+                Attachment <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="attachment.actions.edit" name="#{name(:no_wrapper => true)}">
+                Edit Attachment
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="document_file_name, document_content_type, document_file_size, document_updated_at" param/>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Attachment">
+  <page merge title="#{ht 'attachment.edit.title', :default=>['Edit Attachment'], :name => name(:no_wrapper => true) }">
+
+    <body: class="edit-page attachment" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="attachment.edit.heading" name="#{name(:no_wrapper => true)}">
+            Edit Attachment
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'attachment.actions.delete', :default=>['Remove This Attachment']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
 
 
 
@@ -99,6 +221,15 @@
 
           <section param="content-body">
             <field-list fields="start_date, author, end_date" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">
+                <ht key="attachment.collection.heading" count="&this.attachments.count" >
+                  <human-collection-name collection="attachments" your/>
+                </ht>
+              </h3>
+
+              <collection:attachments param/>
+            </section>
           </section>
     </content:>
 
@@ -219,7 +350,7 @@
 
           <section param="content-body">
             <view:description param="description" />
-            <field-list fields="think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, project" param/>
+            <field-list fields="think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, photo_file_name, photo_content_type, photo_file_size, photo_updated_at, project" param/>
           </section>
     </content:>
 

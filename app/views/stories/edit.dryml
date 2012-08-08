@@ -1,0 +1,114 @@
+<edit-page content-size="9" nav-location="top">
+  
+  <aside:>
+    Hola! Soy el aside :)
+    <!--The photo form has to be outside of the main form-->
+    <attached-photo-form/>
+  </aside:>
+  
+  
+  <prepend-content-body:>
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#patata" data-toggle="tab">Patata</a></li>
+      <li><a href="#ficha" data-toggle="tab">Ficha</a></li>
+      <li><a href="#resumen" data-toggle="tab">Resumen</a></li>
+      <li><a href="#facturas" data-toggle="tab">Facturas</a></li>
+      <li><a href="#extra" data-toggle="tab">Extra</a></li>
+      <li><a href="#documentacion" data-toggle="tab">Documentación</a></li>
+    </ul>
+  </prepend-content-body:>
+  
+  
+  <form:>
+    <field-list: replace>
+      
+      <div class="tab-content">
+      
+      <div id="patata" class="tab-pane active">
+        <field-list size="9" columns="3" 
+          fields="name, end_date, codigo_postal"/>
+      </div>
+      
+      <div class="row columns tab-pane" id="ficha">
+        <div class="span6">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+      
+      <div class="row columns tab-pane" id="resumen">
+        <div class="span6">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span3">
+          <attached-photo part="photo"/>
+        </div>
+      </div>
+      
+      <div class="row columns tab-pane" id="facturas">
+        <div class="span9">
+          <single-field-list fields="description"/>
+        </div>
+      </div>
+      
+      <div class="row columns tab-pane" id="extra">
+        <div class="span3">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span6">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+      
+      <div class="row columns tab-pane" id="documentacion">
+        <div class="span3">
+          <single-field-list fields="description"/>
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+        <div class="span3">
+          <single-field-list fields="responsable"/>
+        </div>
+      </div>
+      
+      </div>
+    </field-list:>
+    
+  </form:>
+  
+</edit-page>
+
+
+
+
+
+<def tag="attached-photo-form">
+  <form action="" class="pull-left" id="photo-fileupload">
+    <span class="btn btn-mini fileinput-button" 
+      style="display:none;">
+      <input type="file" id="fileupload-input" 
+        name="story[photo]" multiple="true"
+        data-url="&story_path(@story)"/>
+    </span>
+  </form>
+  <div class="progress progress-striped active hide" id="upload-progress">
+    <div class="bar" style="width:0%"></div>
+  </div>
+</def>
+
+
+<def tag="attached-photo">
+
+    <a href="&this.photo.url(:original)" class="thumbnail">
+      <img src="&this.photo.url(:medium)"/>
+    </a>
+    <a class="btn btn-success" style="margin:5px" href="#" 
+      onclick="$('input[type=file]').trigger('click');">
+      <i class="icon-plus icon-white"></i>
+    </a>
+
+
+</def>

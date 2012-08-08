@@ -14,15 +14,27 @@
 
 <include src="application"/>
 
-
 <extend tag="page">
-  <old-page merge>
+  <old-page merge nav-location="sub">
     <append-app-name:>
       <span style="float:left;font-size:0.5em;" id="mensajito"></span>
-      <a href="#" class="btn btn-success" style="float:left;"
+      <a if="&Rails.env.test?" 
+         href="#" class="btn btn-success" style="float:left;"
          onclick="$('#mensajito').html('Txatxi'); return false;">
         OK
       </a>
     </append-app-name:>
   </old-page>
 </extend>
+
+
+
+<def tag="form" for="Story">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, description, think_date, start_date, end_date, responsable, calle, localidad, codigo_postal, email, project" param/>
+    <div param="actions">
+      <submit label="#{ht 'story.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
