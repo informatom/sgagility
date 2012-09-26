@@ -1,5 +1,6 @@
 <!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
 
+
 <def tag="form" for="Attachment">
   <form merge param="default">
     <error-messages param/>
@@ -12,10 +13,22 @@
 
 
 
+<def tag="form" for="Category">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, place" param/>
+    <div param="actions">
+      <submit label="#{ht 'category.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
 <def tag="form" for="Project">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="name, start_date, author, end_date, user" param/>
+    <field-list fields="name, start_date, author, end_date, category, user" param/>
     <div param="actions">
       <submit label="#{ht 'project.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

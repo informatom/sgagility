@@ -15,3 +15,4 @@
 //= require_tree ./front
 //= require bootstrap-collapse
 //= require bootstrap-tab
+//= require bootstrap-modal

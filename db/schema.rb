@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120808052027) do
+ActiveRecord::Schema.define(:version => 20120826181012) do
 
   create_table "attachments", :force => true do |t|
     t.datetime "created_at"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(:version => 20120808052027) do
 
   add_index "attachments", ["project_id"], :name => "index_attachments_on_project_id"
 
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "place"
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.date     "start_date"
@@ -33,8 +40,10 @@ ActiveRecord::Schema.define(:version => 20120808052027) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
+  add_index "projects", ["category_id"], :name => "index_projects_on_category_id"
   add_index "projects", ["user_id"], :name => "index_projects_on_user_id"
 
   create_table "stories", :force => true do |t|

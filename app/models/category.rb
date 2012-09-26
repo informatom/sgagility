@@ -1,34 +1,30 @@
-class Project < ActiveRecord::Base
+class Category < ActiveRecord::Base
 
   hobo_model # Don't put anything above this
 
   fields do
-    name       :string, :required
-    start_date :date
-    author     :string
-    end_date   :date
+    name :string
+    place :string
     timestamps
   end
   
-  has_many :stories
-  has_many :attachments
-  belongs_to :user
-  belongs_to :category
-  
-  children :attachments
+  has_many :projects
 
   # --- Permissions --- #
 
   def create_permitted?
     acting_user.administrator?
+    true
   end
 
   def update_permitted?
     acting_user.administrator?
+    true
   end
 
   def destroy_permitted?
     acting_user.administrator?
+    true
   end
 
   def view_permitted?(field)

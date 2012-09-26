@@ -1,0 +1,5 @@
+<new-page><form:>
+  <field-list:>
+    <category-view:><select-one-or-new/></category-view:>
+  </field-list:>
+</form:></new-page>
