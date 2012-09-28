@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+  <title>Projects : Sgagility</title>
+  <link class="app-stylesheet" href="index_design_archivos/front.css" media="screen" rel=
+  "stylesheet" type="text/css">
+  <script src="index_design_archivos/front.js" type="text/javascript">
+</script>
+  <script type="text/javascript">
+</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="authenticity_token" name="csrf-param">
+  <meta content="e0alcUPye/H/jNZPCqIbWB+kX0XSighorV5obi1JaVA=" name="csrf-token">
+</head>
+
+<body class="index-page project">
+  <div id="ajax-progress-wrapper">
+    <div class="ajax-progress" id="ajax-progress">
+      <div>
+        <span id="ajax-progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="navbar-inner navbar-innner">
+      <div class="header container">
+        <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"
+        type="button"></button>
+
+        <h1 class="app-name"><a class="brand" href="http://localhost:3000/">Sgagility</a>
+        <span style="float:left;font-size:0.5em;" id="mensajito"></span></h1>
+
+        <div class="nav-collapse collapse">
+          <ul class="navigation account-nav nav pull-right">
+            <li class="dev-user-changer"><select class="dev-user-changer" onchange=
+            "location.href = '/dev/set_current_user?login=' + encodeURIComponent(this.options[this.selectedIndex].value)">
+            <option value="">
+                Guest
+              </option>
+
+              <option value="tecnicos@unoycero.com" selected="selected">
+                tecnicos@unoycero.com
+              </option>
+            </select></li>
+
+            <li class="nav-item logged-in-as"><a class="user-link" href=
+            "http://localhost:3000/users/1-tecnicos">Logged in as <span class=
+            "view user-name">Tecnicos</span></a></li>
+
+            <li class="nav-item account"><a class="user-link" href=
+            "http://localhost:3000/users/1-tecnicos/account">Account</a></li>
+
+            <li class="nav-item log-out"><a href="http://localhost:3000/logout">Log
+            out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container nav-container">
+    <div class="subnav">
+      <ul class="navigation main-nav nav nav-pills">
+        <li class=""><a href="http://localhost:3000/">Home</a></li>
+
+        <li class=""><a class="class-link" href=
+        "http://localhost:3000/attachments">Attachments</a></li>
+
+        <li class=""><a class="class-link" href=
+        "http://localhost:3000/categories">Categories</a></li>
+
+        <li class="active"><a class="class-link" href=
+        "http://localhost:3000/projects">Projects</a></li>
+
+        <li class=""><a class="class-link" href=
+        "http://localhost:3000/stories">Stories</a></li>
+
+        <li class="pull-right">
+          <div class="search" data-rapid="{&quot;live-search&quot;: {}}">
+            <form action="/search" class="form-horizontal form-search" data-rapid=
+            "{&quot;form&quot;:{&quot;ajax_attrs&quot;:{&quot;refocus-form&quot;:true,&quot;update&quot;:&quot;search-results-part&quot;,&quot;message&quot;:&quot;Querying...&quot;}}}"
+            method="post">
+              <div class="hidden-fields">
+                <input id="page_path" name="page_path" value="/projects" type=
+                "hidden"><input name="authenticity_token" value=
+                "e0alcUPye/H/jNZPCqIbWB+kX0XSighorV5obi1JaVA=" type="hidden">
+              </div><input name="search_version" value="2" type="hidden"> <input class=
+              "live-search search-query" name="query" placeholder="Search" type="search">
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container bootstrap-content">
+    <div class="row main-row">
+      <div class="span12 main-column">
+        <div class="section with-flash content">
+          <div class="header content-header well">
+            <div class="pull-right">
+<!--              <a class="new-link btn new-project-link" href=-->
+<!--              "http://localhost:3000/projects/new"><i class="icon-search"></i> Search</a>-->
+              <a class="new-link btn new-project-link btn-primary" href=
+              "http://localhost:3000/projects/new">New Project</a>
+              
+            </div>
+            <h2 class="heading">Projects</h2>
+
+            
+          </div>
+
+          <div class="section content-body">
+
+            <table class="table table-striped collection table-bordered">
+              <thead>
+                <tr class="field-heading-row">
+                  <th class="Project-heading"><a href="#">Project</a></th>
+
+                  <th class="start-date-heading">Start date</th>
+
+                  <th class="author-heading">Author</th>
+
+                  <th class="end-date-heading">End date</th>
+
+                  <th class="urgency-heading">Urgency</th>
+
+                  <th class="actions-heading">Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="odd project" data-rapid-context="project:4">
+                  <td class="this-view"><span class="view model::project:4"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/4-medas-supportafdsf"><span class=
+                  "view project-name">Medas Supportafdsf</span></a></span></td>
+
+                  <td class="start-date-view"><span class=
+                  "view project-start-date">2012-07-19</span></td>
+
+                  <td class="author-view"><span class="view project-author">Jon
+                  Larrazabal</span></td>
+
+                  <td class="end-date-view"><span class=
+                  "view project-end-date">2012-08-10</span></td>
+
+                  <td class="urgency-view"><span class=
+                  "view project-urgency">Middle</span></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/4-medas-supportafdsf/edit"></a>
+                  <a href="http://localhost:3000/projects/4-medas-supportafdsf"
+                  data-confirm="Are you sure?" data-method="delete" rel=
+                  "nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:5">
+                  <td class="this-view"><span class="view model::project:5"><a class=
+                  "project-link" href="http://localhost:3000/projects/5"></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/5/edit"></a> <a href=
+                  "http://localhost:3000/projects/5" data-confirm="Are you sure?"
+                  data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:6">
+                  <td class="this-view"><span class="view model::project:6"><a class=
+                  "project-link" href="http://localhost:3000/projects/6"></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/6/edit"></a> <a href=
+                  "http://localhost:3000/projects/6" data-confirm="Are you sure?"
+                  data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:7">
+                  <td class="this-view"><span class="view model::project:7"><a class=
+                  "project-link" href="http://localhost:3000/projects/7"></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/7/edit"></a> <a href=
+                  "http://localhost:3000/projects/7" data-confirm="Are you sure?"
+                  data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:8">
+                  <td class="this-view"><span class="view model::project:8"><a class=
+                  "project-link" href="http://localhost:3000/projects/8"></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/8/edit"></a> <a href=
+                  "http://localhost:3000/projects/8" data-confirm="Are you sure?"
+                  data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:9">
+                  <td class="this-view"><span class="view model::project:9"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/9-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/9-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/9-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:10">
+                  <td class="this-view"><span class="view model::project:10"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/10-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/10-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/10-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:11">
+                  <td class="this-view"><span class="view model::project:11"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/11-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/11-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/11-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:12">
+                  <td class="this-view"><span class="view model::project:12"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/12-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/12-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/12-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:13">
+                  <td class="this-view"><span class="view model::project:13"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/13-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/13-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/13-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:14">
+                  <td class="this-view"><span class="view model::project:14"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/14-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/14-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/14-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:15">
+                  <td class="this-view"><span class="view model::project:15"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/15-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/15-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/15-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:16">
+                  <td class="this-view"><span class="view model::project:16"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/16-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/16-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/16-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:17">
+                  <td class="this-view"><span class="view model::project:17"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/17-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/17-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/17-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:18">
+                  <td class="this-view"><span class="view model::project:18"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/18-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/18-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/18-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:19">
+                  <td class="this-view"><span class="view model::project:19"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/19-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/19-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/19-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:20">
+                  <td class="this-view"><span class="view model::project:20"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/20-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/20-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/20-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:21">
+                  <td class="this-view"><span class="view model::project:21"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/21-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/21-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/21-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:22">
+                  <td class="this-view"><span class="view model::project:22"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/22-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/22-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/22-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:23">
+                  <td class="this-view"><span class="view model::project:23"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/23-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/23-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/23-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:24">
+                  <td class="this-view"><span class="view model::project:24"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/24-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/24-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/24-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:25">
+                  <td class="this-view"><span class="view model::project:25"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/25-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/25-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/25-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:26">
+                  <td class="this-view"><span class="view model::project:26"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/26-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/26-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/26-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:27">
+                  <td class="this-view"><span class="view model::project:27"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/27-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/27-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/27-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:28">
+                  <td class="this-view"><span class="view model::project:28"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/28-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/28-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/28-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:29">
+                  <td class="this-view"><span class="view model::project:29"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/29-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/29-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/29-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:30">
+                  <td class="this-view"><span class="view model::project:30"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/30-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/30-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/30-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:31">
+                  <td class="this-view"><span class="view model::project:31"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/31-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/31-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/31-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="odd project" data-rapid-context="project:32">
+                  <td class="this-view"><span class="view model::project:32"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/32-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/32-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/32-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+
+                <tr class="even project" data-rapid-context="project:33">
+                  <td class="this-view"><span class="view model::project:33"><a class=
+                  "project-link" href=
+                  "http://localhost:3000/projects/33-superproject"><span class=
+                  "view project-name">SuperProject</span></a></span></td>
+
+                  <td class="start-date-view">(Not Available)</td>
+
+                  <td class="author-view"></td>
+
+                  <td class="end-date-view">(Not Available)</td>
+
+                  <td class="urgency-view"></td>
+
+                  <td class="actions-view"><a class="project-link" href=
+                  "http://localhost:3000/projects/33-superproject/edit"></a> <a href=
+                  "http://localhost:3000/projects/33-superproject" data-confirm=
+                  "Are you sure?" data-method="delete" rel="nofollow"></a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="bottom-page-nav pagination" extra_attributes="{}" ignore_params=
+            "[:render, :render_options, :_]">
+              <ul>
+                <li class="prev disabled"><a href="#">&#194;&#171; Prev</a></li>
+
+                <li class="active"><a rel="start" href=
+                "http://localhost:3000/projects?page=1">1</a></li>
+
+                <li><a rel="next" href="http://localhost:3000/projects?page=2">2</a></li>
+
+                <li><a href="http://localhost:3000/projects?page=3">3</a></li>
+
+                <li><a href="http://localhost:3000/projects?page=4">4</a></li>
+
+                <li><a href="http://localhost:3000/projects?page=5">5</a></li>
+
+                <li><a href="http://localhost:3000/projects?page=6">6</a></li>
+
+                <li><a href="http://localhost:3000/projects?page=7">7</a></li>
+
+                <li class="next"><a rel="next" href=
+                "http://localhost:3000/projects?page=2">Next &#194;&#187;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div aria-labelledby="ui-dialog-title-search-results-box" role="dialog" tabindex="-1"
+  class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable"
+  style="display: none; z-index: 1000; outline: 0px none; position: absolute;">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+      <span id="ui-dialog-title-search-results-box" class="ui-dialog-title">Search
+      Results</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href=
+      "#"><span class="ui-icon ui-icon-closethick">close</span></a>
+    </div>
+
+    <div class="box dialog-box ui-dialog-content ui-widget-content" data-rapid=
+    "{&quot;dialog-box&quot;:{&quot;options&quot;:{&quot;position&quot;:&quot;center&quot;,&quot;width&quot;:600,&quot;height&quot;:800,&quot;title&quot;:&quot;Search Results&quot;,&quot;autoOpen&quot;:false},&quot;events&quot;:{},&quot;buttons&quot;:null}}"
+    id="search-results-box">
+      <div class="part-wrapper" id="search-results-part">
+        <div class="section" data-rapid="{&quot;search-results&quot;:{}}">
+          Your search returned no matches.
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-resizable-handle ui-resizable-n"></div>
+
+    <div class="ui-resizable-handle ui-resizable-e"></div>
+
+    <div class="ui-resizable-handle ui-resizable-s"></div>
+
+    <div class="ui-resizable-handle ui-resizable-w"></div>
+
+    <div style="z-index: 1001;" class=
+    "ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se">
+    </div>
+
+    <div style="z-index: 1002;" class="ui-resizable-handle ui-resizable-sw"></div>
+
+    <div style="z-index: 1003;" class="ui-resizable-handle ui-resizable-ne"></div>
+
+    <div style="z-index: 1004;" class="ui-resizable-handle ui-resizable-nw"></div>
+  </div>
+</body>
+</html>
+
