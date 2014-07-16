@@ -11,8 +11,6 @@
 //= require hobo_rapid
 //= require hobo_jquery
 //= require hobo_jquery_ui
-//= require hobo_clean
 //= require_tree ./front
-//= require bootstrap-collapse
-//= require bootstrap-tab
-//= require bootstrap-modal
+//= require hobo_bootstrap
+//= require hobo_bootstrap_ui

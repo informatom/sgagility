@@ -12,10 +12,10 @@ end
 module Sgagility
   class Application < Rails::Application
     config.i18n.default_locale = :en
-    
+
   config.hobo.dryml_only_templates = true
 
-    
+
     config.generators do |g|
       g.test_framework :rspec, :fixtures => true
       g.fallbacks[:rspec] = :test_unit
@@ -43,6 +43,7 @@ module Sgagility
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.i18n.enforce_available_locales = true
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

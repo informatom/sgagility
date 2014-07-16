@@ -9,7 +9,6 @@
  *= require hobo_rapid
  *= require hobo_jquery
  *= require hobo_jquery_ui
- *= require jquery-ui/redmond
- *= require_tree ./front
+ *= require front/jquery.fileupload-ui
  *= require hobo_bootstrap
 */
