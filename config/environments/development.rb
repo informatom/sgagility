@@ -28,15 +28,7 @@ Sgagility::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = false
 
-  # By default, rails-dev-tweaks also applies to XHR, but that's not a great default for Hobo
-#  config.dev_tweaks.autoload_rules do
-#    keep :all
-
-#    skip '/favicon.ico'
-#    skip :assets
-#    keep :xhr
-#    keep :forced
-#  end
+  config.eager_load = false
 
   config.watchable_dirs[File.join(config.root, 'app/views')] = ['dryml']
 
