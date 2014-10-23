@@ -9,10 +9,6 @@ Sgagility::Application.routes.draw do
   resources :stories
 
 
-  # Resource routes for controller projects
-  resources :projects
-
-
   # Resource routes for controller users
   resources :users, :only => [:edit, :show, :create, :update, :destroy] do
     collection do
@@ -34,11 +30,15 @@ Sgagility::Application.routes.draw do
   post 'forgot_password(.:format)' => 'users#forgot_password', :as => 'user_forgot_password_post'
 
 
-  # Resource routes for controller attachments
-  resources :attachments
-
-
   # Resource routes for controller categories
   resources :categories
+
+
+  # Resource routes for controller projects
+  resources :projects
+
+
+  # Resource routes for controller attachments
+  resources :attachments
 
 end
